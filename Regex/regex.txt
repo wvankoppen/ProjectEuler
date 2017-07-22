@@ -1,0 +1,4 @@
+Search in VS for rubbish value comments:
+
+([\r\n]+.*<value>.*</value>.*)|([\r\n]+.*<value>.*[\r\n]+.*[\r\n]+.*</value>)
+
