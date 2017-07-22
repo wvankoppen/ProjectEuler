@@ -1,0 +1,27 @@
+#! /usr/bin/python
+
+def palindrome(n):
+  return len(str(n))>1 and str(n)[::-1]==str(n)
+
+c = 0
+
+for i in range (10000):
+  x = i
+  x += int(str(x)[::-1])
+  its=1
+  while (not palindrome(x)) and its <= 55:
+    #print "%i . %i . " % (x,i)
+    x += int(str(x)[::-1])
+    its+=1
+    
+
+  if its>=51:
+    print i
+    c+=1
+
+print c
+
+
+
+#for i in range(50):
+#  print palindrome(i)

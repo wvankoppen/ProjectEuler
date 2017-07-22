@@ -1,0 +1,22 @@
+#! /usr/bin/python
+import string
+
+fname = '22/names.txt'
+lines = [line.strip() for line in open(fname)]
+
+lines.sort()
+j = 0
+st = 0
+for name in lines:
+  j += 1
+  i = 0
+  sn = 0
+  for c in name:
+    sn+= ord(c)-64
+  if name=="COLIN":
+    print sn
+    print j
+  st+=sn*j
+  
+print st
+print ord("a")

@@ -1,0 +1,19 @@
+#! /usr/bin/python
+
+L = []
+
+def R(s,l):
+  if l == []:
+    L.append(s)
+    if len(L)==1000000:
+      print s 
+  else:
+    for i in l: 
+      x = list(l)
+      x.remove(i)
+      R(s+str(i),x)
+    
+
+R("",range(10))
+print L[0]
+

@@ -1,0 +1,50 @@
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+# 70 colored balls are placed in an urn, 10 for each of the seven rainbow colors.
+
+# What is the expected number of distinct colors in 20 randomly picked balls?
+
+# Give your answer with nine digits after the decimal point (a.bcdefghij).
+
+COLORS = 2
+AMOUNT = 10
+
+balls = {}
+for color in range(0,COLORS):
+  balls[color] = AMOUNT
+
+print "Start:"
+print balls
+
+print
+
+totalColors = {}
+
+def pick(choice, remaining):
+  for color in range(0,COLORS):
+    if (remaining[color] > 0):
+      if (sum(remaining.values()) > 10):
+        remainingN = dict(remaining)
+        remainingN[color] -= 1
+        pick (color, remainingN)
+      else: 
+        clrs = 0
+        for i in remaining:
+          if remaining[i] != AMOUNT:
+            clrs += 1
+        if clrs in totalColors:
+          totalColors[clrs] += 1
+        else:
+          totalColors[clrs] = 1
+
+for color in range(0,COLORS):
+  remaining = dict(balls)
+  remaining[color] -= 1
+  pick (color, remaining)
+
+print totalColors
+
+#  for color in keys(balls):
+#    if count != 0:
+#    pick (color, remaining[color] -= 1

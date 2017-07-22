@@ -1,0 +1,17 @@
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+nrs = {}
+
+f = open("p99_nrs")
+for line in f:
+  pair = line.strip().split(",")
+  nrs[float(pair[0])] = float(pair[1])
+
+
+maxPo = 0
+for k in nrs.keys():
+  po = pow(k,nrs[k]/1000000)
+  if (po > maxPo):
+    maxPo = po
+    print (k,nrs[k], po)

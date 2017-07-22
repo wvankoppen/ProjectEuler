@@ -1,0 +1,27 @@
+#! /usr/bin/python
+
+
+def divs(n):
+  count = 0
+  for i in range(1,int(n**0.5)+1):
+    if (n%i==0):
+      count+=1
+#    if (i>30 and count <= 8):
+#      return 0
+  #for i in range(2,10000):  
+  #  if n%i==0:
+  #    count+=1
+  return count*2
+
+
+count = 1
+dsmax = 0
+i = 1
+while dsmax < 500:
+  t = (i*(i+1))/2
+  ds = divs(t)
+  if (dsmax < ds):
+    dsmax = ds
+    print "%i has %i divisors" % (t,ds)
+  i+=1
+

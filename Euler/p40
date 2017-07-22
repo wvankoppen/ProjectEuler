@@ -1,0 +1,15 @@
+#! /usr/bin/python
+s = ""
+i = 0
+while len(s) < 1000000:
+  i+=1
+  s+=(str(i))
+  
+  
+print s[0]
+print s[9]
+print s[99]
+print s[999]
+print s[9999]
+print s[99999]
+print s[999999]

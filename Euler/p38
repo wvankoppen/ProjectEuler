@@ -1,0 +1,24 @@
+#! /usr/bin/python
+Max = 0
+
+for j in range (9,10000):
+  p = False
+  s = ""
+  i = 1
+  if str(j)[:1]=='9':
+    while len(s + str(i*j)) <= 9:
+      s+=str(i*j)
+      i+=1
+
+      
+    if int(s) > Max and len(s) == 9:
+
+      allIn = True
+      for k in range(1,10):
+        if str(k) not in s:
+          allIn = False
+      if allIn:    
+        Max = int(s)
+        print j
+        print Max
+    

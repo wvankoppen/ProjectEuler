@@ -1,0 +1,8 @@
+15. Twee mensen spelen een spel met 22 muntjes. Om en om pakken ze 1, 3 of 4 muntjes weg. Degene die de laatste munt(en) van tafel pakt, verliest. Als beiden perfect spelen, dan zal degene die begint:
+
+a) Altijd winnen
+b) Altijd verliezen
+c) Is niet te zeggen
+
+
+

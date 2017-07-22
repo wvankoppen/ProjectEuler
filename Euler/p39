@@ -1,0 +1,19 @@
+#! /usr/bin/python
+
+
+# a + b + c == d
+# a**2 + b**2 == c**2
+# arcsin(b/c) + arcsin(a/c) == 90
+
+perim = 120
+
+maxSols = 0
+for perim in range (1,1200):
+  sols = 0
+  for a in range(1,perim/2):
+    for b in range(1,perim/2):
+      if a**2+b**2==(perim-a-b)**2:
+        sols += 1
+  if (sols > maxSols):
+    maxSols = sols
+    print (perim,sols)

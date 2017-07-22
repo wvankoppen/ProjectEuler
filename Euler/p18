@@ -1,0 +1,31 @@
+#! /usr/bin/python
+import string
+
+fname = '18/triangle2.txt'
+
+f = open ( fname , 'r')
+m = [ map(int,line.split(' ')) for line in f ]
+
+s = []
+
+for l in (m):
+  print l
+
+for i in range (len(m)-2,-1,-1):
+  for j in range (0,len(m[i])):
+    add = max(m[i+1][j],m[i+1][j+1])
+    m[i][j] = m[i][j] + add
+
+    
+#m2 = reversed (m)
+
+for l in (m):
+  print l
+  
+print m[0][0]
+
+
+  
+  
+
+

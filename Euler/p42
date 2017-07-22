@@ -1,0 +1,25 @@
+#! /usr/bin/python
+
+
+fname = '42/words.txt'
+lines = [line.strip() for line in open(fname)]
+
+#print lines
+
+triangles = []
+for i in range(1,50):
+  triangles.append(0.5*i*(i+1))
+  
+print triangles
+
+c = 0
+
+for word in lines:
+  s = 0
+  for j in word:
+    s+= ord(j)-64
+  print "%s %i" % (word,s)
+  if s in triangles:
+    c+=1
+    
+print c
