@@ -5,11 +5,11 @@ Get-Alias -Definition Select-Object
 
 $Values = (11..13)
 
-$Values | select {$_ -gt 11}
+$Values | select {$_ -gt 12}
 
 echo "--------"
 
-$Values | foreach {$_ -gt 1}
+$Values | foreach {$_ -gt 12}
 
 echo "========"
 

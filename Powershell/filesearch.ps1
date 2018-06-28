@@ -1,0 +1,1 @@
+ @(Get-ChildItem packages.config -Recurse | Where { Select-String -Path $_ -pattern Infra })[0] | Select-Object -Property *
