@@ -2,14 +2,16 @@
 
 void Main()
 {
-	var Dict = new Dictionary<Key,int>();
-	var key = new Key{A="1"};
-	Dict.Add(key,1);
-	key.A = "2";
-	Dict[key].Dump();
+	var dict = new Dictionary<MyObj, int>();
+	var key = new MyObj{Value = "1"};
+	
+	dict.Add(key, 1);
+	dict[key].Dump();
+	
+	key.Value = "2";
+	dict[key].Dump();
 }
 
-public class Key {
-	public string A {get;set;}
+public class MyObj {
+	public string Value {get;set;}
 }
-
