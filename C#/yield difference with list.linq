@@ -21,10 +21,4 @@ public IEnumerable<DTO> GetDataStraight()
   return new List<DTO>{new DTO()};
 }
 
-public  class DTO {
-	public DTO()
-	{		
-	}	
-}
-
-// Define other methods and classes here
+public  class DTO {}

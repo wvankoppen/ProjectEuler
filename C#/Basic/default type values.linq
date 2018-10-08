@@ -1,7 +1,8 @@
 <Query Kind="Statements" />
 
-default(int).Dump();
-default(Int32).Dump();
-default(Enum).Dump();
-default(string).Dump();
-default(object).Dump();
+default(bool).Dump("Default bool");
+default(int).Dump("Default int");
+default(Int32).Dump("Default Int32");
+default(Enum).Dump("Default Enum");
+default(string).Dump("Default string");
+default(object).Dump("Default object");

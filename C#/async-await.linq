@@ -3,7 +3,7 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-Console.WriteLine(DateTime.Now);
+Console.WriteLine(DateTime.Now + " started");
 
 // This block takes 1 second to run because all 5 tasks are running simultaneously
 {
@@ -20,7 +20,7 @@ Console.WriteLine(DateTime.Now);
     await e;
 }
 
-Console.WriteLine(DateTime.Now);
+Console.WriteLine(DateTime.Now + " ended parallel");
 
 // This block takes 5 seconds to run because each "await" pauses the program until the task finishes
 {
@@ -30,4 +30,4 @@ Console.WriteLine(DateTime.Now);
     await Task.Delay(1000);
     await Task.Delay(1000);
 }
-Console.WriteLine(DateTime.Now);
+Console.WriteLine(DateTime.Now + " ended serial");

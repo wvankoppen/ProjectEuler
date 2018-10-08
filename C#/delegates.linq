@@ -2,35 +2,39 @@
   <Namespace>System</Namespace>
 </Query>
 
-public delegate string FirstDelegate (int x);
+public delegate string MyDelegate (string x);
     
 public class DelegateTest
 {    
-    public string name;
+    public string Name;
         
-    public static string StaticMethod (int i)
+    public static string StaticMethod (string p)
     {
-        return string.Format ("Static method: {0}", i);
+		".StaticMethod".Dump();
+        return string.Format ("Static method: {0}", p);
     }
 
-    public string InstanceMethod (int i)
+    public string InstanceMethod (string p)
     {
-        return string.Format ("{0}: {1}", name, i);
+		".InstanceMethod".Dump();
+        return string.Format ("{0}: {1}", this.Name, p);
     }
 }
 
 void Main()
 {
-	var StaticMethodDelegate = new FirstDelegate(DelegateTest.StaticMethod);
+	var staticMethodDelegate = new MyDelegate(DelegateTest.StaticMethod);
         
-    var instance = new DelegateTest();
-    instance.name = "My instance";
-    var InstanceMethodDelegate = new FirstDelegate(instance.InstanceMethod);
+    var instance = new DelegateTest 
+	{
+		Name = "My instance"
+	};
+	
+    var instanceMethodDelegate = new MyDelegate(instance.InstanceMethod);
     
-	var combinedDelegate = (FirstDelegate)Delegate.Combine(InstanceMethodDelegate, StaticMethodDelegate);
+	var combinedDelegate = (MyDelegate)Delegate.Combine(staticMethodDelegate, instanceMethodDelegate);
 	
-    Console.WriteLine (StaticMethodDelegate(1)); 
-    Console.WriteLine (InstanceMethodDelegate(2));  
-	
-	Console.WriteLine (combinedDelegate(1));  
+    staticMethodDelegate("hi").Dump("Delegate containing static method"); 
+	instanceMethodDelegate("hi").Dump("Delegate containing instance method"); 
+	combinedDelegate("hi").Dump("Delegate containing combi of static and instance method (both delegate run, last returns)"); 
 }

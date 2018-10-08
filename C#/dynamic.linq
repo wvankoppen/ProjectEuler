@@ -2,14 +2,13 @@
 
 void Main()
 {
-	var x =new {X = "123"};
-	func(x);
+	var x = new {X = "123"};
+	Do(x);
 	
 }
 
-private void func(dynamic x){
-Console.Write(x);
-Console.Write(x.Y);
+private void Do(dynamic x)
+{
+	Console.Write(x);
+	Console.Write(x.X);
 }
-
-// Define other methods and classes here
