@@ -1,36 +1,29 @@
-// 1. npm init
-// 2. npm install --save webpack webpack-dev-server babel-loader babel-preset-es2015
-// 3. mkdir dist && touch index.html
-// 4. Include `<script src="/bundle.js"></script>` inside index.html
-// 5. mkdir src && touch src/index.js
-// 6. Add some code to index.js (e.g. `console.log('Hello, World!'))
-// 7. npm start
-// 8. Browse to http://localhost:8080/dist/
-
-const webpack = require('webpack')
+const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    context: __dirname + "/src",
-    entry: "./index",
-    output: {
-        path: __dirname + "/dist",
-        filename: "bundle.js"
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015']
-                }
-            }
-        ]
-    },
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+  entry: './index.ts',
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
     ]
-}
+  },
+  resolve: {
+    extensions: [ '.ts', '.js' ]
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: './index.html', to: 'index.html', toType: 'file' },
+      { from: './favicon.png', to: 'favicon.png', toType: 'file' }
+    ])
+  ],
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
+};
