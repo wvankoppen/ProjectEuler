@@ -85,5 +85,4 @@ class MainClass {
 		subscriber.UnsubscribeNull();
 		publisher.Raise();
     }
-
 }

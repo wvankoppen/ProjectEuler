@@ -4,6 +4,7 @@ static void Main(string[] args)
 {
     var inc = GetAFunc();
 	var inc2 = GetAFunc();
+	
     Console.WriteLine(inc());
 	Console.WriteLine(inc());
 	Console.WriteLine(inc());

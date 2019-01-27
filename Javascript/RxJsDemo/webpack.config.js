@@ -18,8 +18,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './index.html', to: 'index.html', toType: 'file' },
-      { from: './favicon.png', to: 'favicon.png', toType: 'file' }
+      { from: './index.html', to: 'index.html', toType: 'file' }
     ])
   ],
   output: {

@@ -8,22 +8,23 @@ void Main()
 	new Runner().Run();
 }
 
+// This example shows how to use async-await as a specific time awaiter.
 class Runner 
 {
 	public async void Run() 
 	{
 		var s = new Stopwatch();
 		s.Start();
-		var waitOneSecond = new TimeWaiter(2);
+		var waitTwoSeconds = new TimeWaiter(2);
 		var waitFiveSeconds = new TimeWaiter(5);
 		
-		await waitOneSecond;
+		await waitTwoSeconds;
 		s.Elapsed.Dump();
 		
-		await waitOneSecond;
+		await waitTwoSeconds;
 		s.Elapsed.Dump();
 		
-		await waitOneSecond;
+		await waitTwoSeconds;
 		s.Elapsed.Dump();
 		
 		await waitFiveSeconds;
@@ -44,13 +45,13 @@ class TimeWaiter : INotifyCompletion
 
 	public TimeWaiter GetAwaiter() 
 	{
-		"GetAwaiter".Dump();
+		".GetAwaiter".Dump();
 		return this;
 	}
 	
 	public void OnCompleted (Action continuation) 
 	{
-		"OnCompleted".Dump();
+		".OnCompleted".Dump();
 		Task.Factory.StartNew(() => 
 		{ 
 			Thread.Sleep(seconds * 1000);
@@ -62,14 +63,13 @@ class TimeWaiter : INotifyCompletion
     {
         get 
 		{ 
-			"IsCompleted".Dump();
+			".IsCompleted".Dump();
 			return false; 
 		}
     }
 
     public void GetResult()
     {
-		"GetResult".Dump();
+		".GetResult".Dump();
     }
 }
-

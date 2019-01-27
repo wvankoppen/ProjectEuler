@@ -2,28 +2,33 @@
 
 void Main()
 {
-	var car = new Car();
+	var derrived = new Derrived();
 }
 
-
-class Vehicle {
-	public Vehicle(){
+class Base
+{
+	public Base()
+	{
+		Console.WriteLine("Base()");
 		this.Init();
 	}
 
-	public virtual void Init() 
+	public virtual void Init()
 	{
-		Console.WriteLine("Vehicle.Init");
+		Console.WriteLine("Base.Init");
 	}
 }
 
-class Car : Vehicle {
-	public Car(){
+class Derrived : Base
+{
+	public Derrived()
+	{
+		Console.WriteLine("Derrived()");
 		this.Init();
 	}
-	
-	public override void Init() 
+
+	public override void Init()
 	{
-		Console.WriteLine("Car.Init");
+		Console.WriteLine("Derrived.Init");
 	}
 }

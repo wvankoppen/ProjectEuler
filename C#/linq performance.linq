@@ -13,7 +13,7 @@ var s = Enumerable.Range(1, listSize)
 	.Select(n => Math.Pow(n,2))
 	.Sum();
 stopwatch.Stop();
-Console.WriteLine("LINQ {0} in\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t {1}ms", s, stopwatch.ElapsedMilliseconds);
+stopwatch.ElapsedMilliseconds.Dump("LINQ example of computing " + s);
 
 /////////////////////////////////////////////////////////////////////////////////////
 stopwatch.Restart();
@@ -26,7 +26,7 @@ for (int n = 1; n <= listSize; n++)
 	sum += c;
 }
 stopwatch.Stop();
-Console.WriteLine("for loop {0} in\t\t\t\t\t\t\t\t\t\t\t\t\t\t {1}ms", sum, stopwatch.ElapsedMilliseconds);
+stopwatch.ElapsedMilliseconds.Dump("For loop example of computing " + s);
 
 /////////////////////////////////////////////////////////////////////////////////////
 var q = Enumerable.Range(1, listSize).AsQueryExpr()
@@ -39,7 +39,7 @@ q.Compile();
 stopwatch.Restart();
 var s2 = q.Run();
 stopwatch.Stop();
-Console.WriteLine("LinqOptimizer.CSharp {0} in\t\t\t\t {1}ms", s2, stopwatch.ElapsedMilliseconds);
+stopwatch.ElapsedMilliseconds.Dump("LinqOptimizer.CSharp example of computing " + s);
 
 /////////////////////////////////////////////////////////////////////////////////////
 stopwatch.Restart();
@@ -49,4 +49,4 @@ var s3 = Enumerable.Range(1, listSize).AsParallel()
 	.Select(n => Math.Pow(n, 2))
 	.Sum();
 stopwatch.Stop();
-Console.WriteLine("PLINQ {0} in\t\t\t\t\t\t\t\t {1}ms", s3, stopwatch.ElapsedMilliseconds);
+stopwatch.ElapsedMilliseconds.Dump("PLINQ example of computing " + s);

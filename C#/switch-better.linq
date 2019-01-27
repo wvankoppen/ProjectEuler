@@ -1,6 +1,33 @@
 <Query Kind="Program" />
 
-// Open-closed
+// BAD: Closed-open example
+void Main3()
+{
+	bool isStopRequested = false;
+
+	while (!isStopRequested)
+	{
+		string userInput = Console.ReadLine();
+		switch (userInput)
+		{
+			case "s":
+				Console.WriteLine("Stop");
+				isStopRequested = true;
+				break;
+			case "d":
+				Console.WriteLine("Do it!");
+				break;
+			case "o":
+				Console.WriteLine("Do the other!");
+				break;
+			default:
+				Console.WriteLine("Invalid choice!");
+				break;
+		}
+	}
+}
+
+// BETTER: Open-closed example
 void Main()
 {
 	bool isStopRequested = false;

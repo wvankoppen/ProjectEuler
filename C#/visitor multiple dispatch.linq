@@ -29,6 +29,7 @@ class Addition : Expression
     }
 }
 
+// Visitor for printing math expressions
 class MathExpressionPrinter
 {
     public void Print(Literal literal, StringBuilder sb)
@@ -61,6 +62,6 @@ class Program
         var sb = new StringBuilder();
 		
         new MathExpressionPrinter().Print((dynamic)expression, sb);
-        Console.WriteLine(sb.ToString());
+        sb.ToString().Dump("Output of the visitors");
     }
 }

@@ -1,29 +1,27 @@
 <Query Kind="Program" />
 
 void Main()
-{	
-	Action<int,int> mul = (x,y) => 
-	{
-		Console.WriteLine(x * y);
-	};
-	
-	Action<int> mul2 = (z) => 
-	{
-		mul(z,2);
-	};	
-	
-	Action<int> mul3 = (z) => 
-	{
-		mul(z,3);
-	};	
-	Action<int> mul3plus1 = (z) => 
-	{
-		mul3(z + 1);
-	};	
-	
-	mul2(6);
-	mul3(6);
-	mul3plus1(6);
-}
+{
+	Action<int, int> multiply = (x, y) =>
+	 {
+		 Console.WriteLine(x * y);
+	 };
 
-// Define other methods and classes here
+	Action<int> MultiplyByTwo = (z) =>
+	{
+		multiply(z, 2);
+	};
+
+	Action<int> MultiplyByThree = (z) =>
+	{
+		multiply(z, 3);
+	};
+	Action<int> PlusOneMultiplyByThree = (z) =>
+	{
+		MultiplyByThree(z + 1);
+	};
+
+	MultiplyByTwo(6);
+	MultiplyByThree(6);
+	PlusOneMultiplyByThree(6);
+}
