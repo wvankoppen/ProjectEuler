@@ -1,44 +1,16 @@
 import { Observable, of, fromEvent, Subject, observable, interval, queueScheduler, asyncScheduler, asapScheduler, merge, from, timer, combineLatest, forkJoin } from "rxjs";
 import { ajax } from "rxjs/ajax";
-import { map, mergeMap, filter, tap, catchError, take, share, publish, multicast, refCount, publishLast, publishBehavior, publishReplay, observeOn, mapTo, combineAll} from "rxjs/operators";
+import { map, mergeMap, filter, tap, catchError, take, share, publish, multicast, refCount, publishLast, publishBehavior, publishReplay, observeOn, mapTo, combineAll } from "rxjs/operators";
 import { TestScheduler } from 'rxjs/testing';
 
-//#region Operator custom
-
-// function myCustomOperator(year, log) {
-//     return source$ => {
-//         return new Observable(subscriber => {
-//             return source$.subscribe(
-//                 book => {
-//                     if (book.publicationYear < year) {
-//                         subscriber.next(book);
-//                     }
-//                     if (log) {
-//                         console.log('Book by custom operator:' + book.title )
-//                     }
-//                 }
-//             );
-//         })
-//     }
-// }
-
-// function grabNewerThan(year) {
-//     return filter(b => b.publicationYear > 1950)
-// }
-
-//#endregion
-
-//#region simple iteration of sequence of numbers
-// let sequence$ = of ([1,2,3,4,5]);
-// sequence$.subscribe(console.log);
-//#endregion
 
 //#region Hook DOM events
 let loaded$ = fromEvent(document, 'DOMContentLoaded');
 loaded$.subscribe(s => {
     let click1$ = fromEvent(document.getElementById('button1'), 'click');
-    click1$.subscribe(s => { 
-        document.getElementById('content1').innerHTML += "<span>hoi</span>" })    
+    click1$.subscribe(s => {
+        document.getElementById('content1').innerHTML += "<span>hoi</span>"
+    })
 });
 //#endregion
 
@@ -62,62 +34,9 @@ loaded$.subscribe(s => {
 
 //#endregion
 
-//#region Subjects
-// let subject$ = new Subject();
-// subject$.subscribe(v => console.log("Obs 1: " + v));
-// subject$.subscribe(v => console.log("Obs 2: " + v));
 
-// subject$.next('Hi there!');
 
-// let source$ = new Observable(subscriber => {
-//     subscriber.next('Greeting!');
-// });
-// source$.subscribe(subject$);
-//#endregion
 
-//#region Hot/cold observables
-// let source$ = interval(1000)
-//     .pipe(
-//         take(5),
-//         tap((x) => console.log(1, x)),
-//         //share()
-//         //multicast(new Subject()),
-//        // publishBehavior(42),
-//         tap((x) => console.log(2, x)),
-//         //refCount(),
-//         share(),
-//         tap((x) => console.log(3, x)),
-//         );
-    
-
-// // subject$ = new Subject();
-// // source$.subscribe(subject$);   
-
-// source$.subscribe(
-//     v => console.log("Obs A: " + v),
-//     null,
-//     () => console.log("Obs A: completed!"),
-// );
-
-// setTimeout(() => {
-//     source$.subscribe(v => console.log("Obs B: " + v));
-// }, 1000);
-
-// // setTimeout(() => {
-// //     source$.subscribe(v => console.log("Obs C: " + v));
-// // }, 2000);
-
-// // setTimeout(() => {
-// //     source$.subscribe(
-// //         v => console.log("Obs D: " + v),
-// //         null,
-// //         () => console.log("Obs D: completed!"),
-// //         );
-// // }, 4500);
-
-// //source$.connect();
-
-//#endregion
 
 //#region Schedulers
 // console.log('Start script');
@@ -211,6 +130,7 @@ const source = interval(1000).pipe(take(2));
 const example = source.pipe(
     map(val => interval(1000).pipe(map(i => `Result (${val}): ${i}`), take(5)))
 );
+
 /*
   2 values from source will map to 2 (inner) interval observables that emit every 1s
   combineAll uses combineLatest strategy, emitting the last value from each

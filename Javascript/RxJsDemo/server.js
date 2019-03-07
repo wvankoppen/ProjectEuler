@@ -4,6 +4,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var variables1 = require('./server/variables/variables');
+// var rep1 = require('./server/variables/representation1');
+// var rep2 = require('./server/variables/representation2');
+
+
 var routes = require('./server/routes/index');
 var readers = require('./server/routes/readers');
 var books = require('./server/routes/books');
@@ -22,6 +27,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // app.use('/', routes);
+console.log('hi', readers, variables1);
+app.use('/api/variables', readers);
+// app.use('/api/rep1', rep1);
+// app.use('/api/rep2', rep2);
+
 app.use('/api/readers', readers);
 app.use('/api/books', books);
 app.use('/api/errors', errors);
