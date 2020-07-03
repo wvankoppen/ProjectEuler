@@ -1,14 +1,12 @@
-import { Observable, of, fromEvent, Subject, observable, interval, queueScheduler, asyncScheduler, asapScheduler, merge, from, timer, combineLatest, forkJoin } from "rxjs";
-import { ajax } from "rxjs/ajax";
-import { map, mergeMap, filter, tap, catchError, take, share, publish, multicast, refCount, publishLast, publishBehavior, publishReplay, observeOn, mapTo, combineAll } from "rxjs/operators";
-import { TestScheduler } from 'rxjs/testing';
+import { fromEvent, interval, timer, combineLatest } from "rxjs";
+import { map, take, combineAll } from "rxjs/operators";
 
 
 //#region Hook DOM events
 let loaded$ = fromEvent(document, 'DOMContentLoaded');
-loaded$.subscribe(s => {
+loaded$.subscribe(() => {
     let click1$ = fromEvent(document.getElementById('button1'), 'click');
-    click1$.subscribe(s => {
+    click1$.subscribe(() => {
         document.getElementById('content1').innerHTML += "<span>hoi</span>"
     })
 });
@@ -137,5 +135,4 @@ const example = source.pipe(
   whenever either observable emits a value
 */
 const combined = example.pipe(combineAll());
-const subscribe = combined.subscribe(val => console.log(val));
 
