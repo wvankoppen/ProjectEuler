@@ -19,75 +19,98 @@ Given that A is an optimum special sum set for n = 7, find its set string.
 NOTE: This problem is related to Problem 105 and Problem 106.
 
 */
- 
 
 'use strict';
 
-
 const l = console.log;
 
-// debugger;
-function consider (base, choices, size) {
-	if (choices.length + base.length < size) {
-		return {l:888888888};
-	}
-	l('consider', base,choices);
-	if (hasEqualSubsets(base)){
-		return  {l:777777777};
-	}
-	
-	if (base.length === size) return {l: base.reduce((acc,curr) => acc+curr,0),b:base};
-	const [head, ...tail] = choices;
-	if (!head){return  {l:999999999}}
+function considerSet(set, choices, targetSize) {
+    if (choices.length + set.length < targetSize) {
+        // We included insufficient choices in this path to make it to the finish!
+        return { sum: Number.MAX_VALUE };
+    }
+    // l('considerSet', set, choices);
+    if (hasEqualSubsets(set)) {
+        // Solution is not valid
+        return { sum: Number.MAX_VALUE };
+    }
 
-	
+    if (set.length === targetSize) {
+        const sum = set.reduce((acc, curr) => acc + curr, 0);
+        return { sum, set };
+    }
 
-	const with2 = consider([...base, head], tail,size );
-	const without = consider(base, tail, size );
+    if (!choices.length) {
+        // Nothing left to try in this path!
+        return { sum: Number.MAX_VALUE };
+    }
 
-	if (with2.l < without.l) {
-		return with2;
-	}
-	else {
-		return without;
-	}
+    const [head, ...tail] = choices;
+
+    const incl = considerSet([...set, head], tail, targetSize);
+    const excl = considerSet(set, tail, targetSize);
+
+    if (incl.sum < excl.sum) {
+        return incl;
+    } else {
+        return excl;
+    }
 }
 
-// const elems = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]
-const elems = [1,2,3,4,5];
-function hasEqualSubsets (theArray)
-	{ 
-		//debugger;
-		const subsets = theArray.reduce(
-        (acc, curr) => acc.concat(
-         acc.map(set => [curr,...set])
-        ),
+function hasEqualSubsets(set) {
+    const subsets = set.reduce(
+        (acc, curr) => acc.concat(acc.map((sett) => [curr, ...sett])),
         [[]]
-	  );
-	  const sumsMap = subsets.reduce((all,subs) => { all[ subs.reduce((acc,curr) => acc+curr,0)] = subs;return all;});
-	  console.log(sumsMap);
-	if( sumsMap.length !== subsets.length) {
-		return true;
-	}
-	let m = 0;
-	for (let s of sumsMap){
-		debugger;
-		if(m <= s.value.length){
-			m = s.value.length;
-		}
-		else {
-			console.log('true', s)
-			return true;
-		}
-	}
-	
+    );
 
-	return false;
+    // Remove empty set
+    subsets.shift();
+
+    const sumsMap = subsets.reduce((all, subs) => {
+        if (!all) {
+            return null;
+        }
+        const s = subs.reduce((acc, curr) => acc + curr, 0);
+        if (all[s]) {
+            return null;
+        }
+        all[s] = subs;
+        return all;
+    }, {});
+
+    if (!sumsMap) {
+        return true;
+    }
+
+    if (sumsMap.length && sumsMap.length !== subsets.length) {
+        return true;
+    }
+    // [sum]=
+    let minLengths = {};
+    for (const [sum, set] of Object.entries(sumsMap)) {
+        if (!minLengths[sum]) {
+            minLengths[sum] = set.length;
+            for (let k = sum - 1; k > 0; k--) {
+                if (minLengths[k] > set.length) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
 }
 
-l(hasEqualSubsets([1,2,4]));
+// l(hasEqualSubsets([1, 2, 3, 4]));
+// l(hasEqualSubsets([1, 2, 4, 8]));
+// l(hasEqualSubsets([2, 3, 5]));
+// l(hasEqualSubsets([3, 4, 5, 6, 8]));
+// l(hasEqualSubsets([3, 5, 6, 7]));
+// SOLUTION: 20313839404245
+const elements = Array.from({length: 26}, (x, i) => i + 19);
 
-const r = consider([],elems, 7);
+// const elements = [1, 2, 3, 4, 5,6,7,8,9];
+const r = considerSet([], elements, 7);
 l(r);
 
 // 11, 18, 19, 20, 22, 25
