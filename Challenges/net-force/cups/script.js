@@ -35,5 +35,29 @@ Continue until you have 500 cups. The total of possibilities from 1 to 500 is th
 'use strict';
 
 const l = console.log;
+let results = new Set();
 
-function consider(ballsIn, remainder, cupAmount) {}
+
+function consider(cupAmounts, remainder) {
+    
+
+    l('consider', cupAmounts, remainder,results);
+    if (remainder == 0) {
+        return 1;
+    }
+    
+    
+    cupAmounts.split().map((c,i) => 
+    {
+        let candidate = [...cupAmounts];
+        candidate[i]++;
+        return consider(candidate, remainder -1);
+        
+    }).reduce((acc,curr) => acc+curr,0);
+
+   
+}
+
+
+consider('000', 5);
+l(results);
