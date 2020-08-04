@@ -35,29 +35,64 @@ Continue until you have 500 cups. The total of possibilities from 1 to 500 is th
 'use strict';
 
 const l = console.log;
-let results = new Set();
+const possibilities = {};
+const cache = {};
 
+function sortText(text) {
+    return text.split('').sort().join('');
+}
 
-function consider(cupAmounts, remainder) {
-    
-
-    l('consider', cupAmounts, remainder,results);
+function getPossibilityAmount(cupAmounts, remainder) {
+    if (possibilities.hasOwnProperty(cupAmounts)) {
+        //l('getPossibilityAmount ______', cupAmounts, remainder, {...possibilities});
+        return 0;
+    }
+    // if (cache.hasOwnProperty(sortText(cupAmounts))) {
+    //     const ret = cache[sortText(cupAmounts)];
+    //     l('getPossibilityAmount cache', cupAmounts, remainder, ret);
+    //     return ret;
+    // }
+    //l('getPossibilityAmount       ', cupAmounts, remainder);
     if (remainder == 0) {
         return 1;
     }
-    
-    
-    cupAmounts.split().map((c,i) => 
-    {
-        let candidate = [...cupAmounts];
-        candidate[i]++;
-        return consider(candidate, remainder -1);
-        
-    }).reduce((acc,curr) => acc+curr,0);
 
-   
+    const cups = cupAmounts.split('');
+    const r = cups
+        .map((c, i) => {
+            let candidate =
+                cupAmounts.substr(0, i) +
+                String.fromCharCode(cupAmounts.charCodeAt(i) + 1) +
+                cupAmounts.substr(i + 1, cupAmounts.length - 1 - i);
+            let r = getPossibilityAmount(candidate, remainder - 1);
+            possibilities[candidate] = r;
+            const key = sortText(candidate);
+            cache[key] = r;
+
+            return r;
+        })
+        .reduce((acc, curr) => acc + curr, 0);
+
+    return r;
+}
+const amount = 25;
+let results = [];
+for (let i = 5; i < 5 + amount; i++) {
+    const r = getPossibilityAmount(''.padEnd(i, '0'), 5);
+    l(r - results[results.length-1]);
+    results.push(r);
 }
 
-
-consider('000', 5);
 l(results);
+
+
+// 1= 1
+// 2= 6
+// 3= 21
+// 4= 56
+// 5= 126
+// 6= 252
+// 7= 462
+// 8= 792
+// 9= 1287
+// 10 = 2002
