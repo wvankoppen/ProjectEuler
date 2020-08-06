@@ -5,9 +5,23 @@ Find the unique positive integer whose square has the form 1_2_3_4_5_6_7_8_9_0 (
 'use strict';
 
 const l = console.log;
-const start = 1192213971 ;
-const eend = start + 100;
-for (let i=start; i<eend; i++){
+const min = 1020304050607080900;
+const max = 1929394959697989990;
+const first = Math.floor(Math.sqrt(min));
+const last = Math.ceil(Math.sqrt(max));
+const space = (last-first);
+l(space);
+
+l(Math.random());
+
+
+
+
+// const start = 1192213971 ;
+// const eend = start + 100;
+l('range',first,last);
+
+for (let i=first; i<last; i++){
     const square = i**2;
     const s = square + '';
     // if (s.substr(0,1) !== '1') continue;
@@ -19,6 +33,9 @@ for (let i=start; i<eend; i++){
     if (s.substr(8,1) !== '5') continue;
     if (s.substr(10,1) !== '6') continue;
 
+    if (i%1000 < 10) {
+        l((i-first)/space);
+    }
 
     if (s.substr(12,1) !== '7') continue;
 
