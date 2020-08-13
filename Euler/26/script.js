@@ -22,15 +22,13 @@ function divide(denominator) {
     let ret = '';
     let n = 1;
 
-    for (let i = 0; i < 200; i++) {
-
+    for (let i = 0; i < 20000; i++) {
         if (i > 0) {
             ret += Math.floor(n / denominator);
-
         }
         n = n % denominator;
         n *= 10;
-        if (i>0 && ret.length % 2 === 0) {
+        if (i > 0 && ret.length % 2 === 0) {
             const leftPart = ret.substr(0, ret.length / 2);
             const rightPart = ret.substr(ret.length / 2);
             if (leftPart === rightPart) {
@@ -40,6 +38,7 @@ function divide(denominator) {
     }
 }
 
-for (let i=0; i<1000; i++) {
-    l(divide(i),i);
+for (let i = 0; i < 100; i++) {
+    l(divide(i), i);
 }
+
