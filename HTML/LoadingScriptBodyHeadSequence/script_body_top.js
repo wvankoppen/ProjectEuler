@@ -1,1 +1,0 @@
-console.debug('script_body top');

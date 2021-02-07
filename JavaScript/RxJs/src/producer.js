@@ -4,6 +4,8 @@ import { share, take, tap } from 'rxjs/operators';
 
 
 window.producer = () => {
+    console.log('Start producer');
+
     const producer = (subscriber) => {
         console.log('Producer: Lets produce some stuff');
         const handle = setInterval(() => {
@@ -13,7 +15,7 @@ window.producer = () => {
         }, 500);
 
         return () => {
-            console.log('Producer: I hear you, I will stop producing!');
+            console.log('Producer: I hear you, I will stop producing in a second!');
             clearInterval(handle);
         };
     };
@@ -31,4 +33,5 @@ window.producer = () => {
         console.log('Consumer: unsubscribe!');
         subscription.unsubscribe();
     }, 1000);
+
 };
