@@ -1,9 +1,11 @@
-import {interval, Observable, of} from 'rxjs';
+import { Observable } from 'rxjs';
+import { demo } from './bootstrapper';
 import { proxy } from './lib/proxy';
-import { share, take, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 
+demo('producer', producer);
 
-window.producer = () => {
+function producer() {
     console.log('Start producer');
 
     const producer = (subscriber) => {
@@ -15,7 +17,9 @@ window.producer = () => {
         }, 500);
 
         return () => {
-            console.log('Producer: I hear you, I will stop producing in a second!');
+            console.log(
+                'Producer: I hear you, I will stop producing in a second!'
+            );
             clearInterval(handle);
         };
     };
@@ -33,5 +37,4 @@ window.producer = () => {
         console.log('Consumer: unsubscribe!');
         subscription.unsubscribe();
     }, 1000);
-
-};
+}

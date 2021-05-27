@@ -5,11 +5,13 @@ import {
     delay,
     map,
     switchMap,
-    take,
     toArray,
 } from 'rxjs/operators';
+import { demo } from './bootstrapper';
 
-window.sequencer = () => {
+demo('sequencer', sequencer);
+
+function sequencer() {
     const arr = [10, 200, 3];
     const reqs = from(arr)
         .pipe(
@@ -27,4 +29,4 @@ window.sequencer = () => {
 
     reqs.then(console.log);
     // .subscribe(console.log, console.error);
-};
+}
