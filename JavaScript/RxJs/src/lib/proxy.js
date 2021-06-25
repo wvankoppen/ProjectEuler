@@ -12,7 +12,7 @@ export function obs(name = '', subscriber) {
         },
         complete: () => {
             console.log(name, 'PROXY: complete!');
-            subscriber &&  subscriber.complete();
+            subscriber && subscriber.complete();
         },
     };
     return observer;
@@ -20,12 +20,15 @@ export function obs(name = '', subscriber) {
 
 export function proxy(name = '') {
     return (sourceObservable) => {
-        console.log(name, 'PROXY: Creating proxy');
+        console.log(name, 'PROXY: create');
         return new Observable((subscriber) => {
-            const subscription = sourceObservable.subscribe(obs(name, subscriber));
+            console.log(name, 'PROXY: subscribe');
+            const subscription = sourceObservable.subscribe(
+                obs(name, subscriber)
+            );
 
             return () => {
-                console.log(name, 'PROXY: Unsubscribed!');
+                console.log(name, 'PROXY: unsubscribed!');
                 subscription.unsubscribe();
             };
         });

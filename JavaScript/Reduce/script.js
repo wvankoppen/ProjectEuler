@@ -1,28 +1,55 @@
 'use strict';
-
-console.group('Summation example');
-
-const numbers = [10, 2, 8, 15];
-let result = numbers.reduce((acc, curr) => {
-    console.log(acc, curr);
-    return acc + curr;
-});
-
-console.log(result);
-console.groupEnd();
+//
+// console.group('Summation example');
+//
+// const numbers = [10, 2, 8, 15];
+// let result = numbers.reduce((acc, curr) => {
+//     console.log(acc, curr);
+//     return acc + curr;
+// });
+//
+// console.log(result);
+// console.groupEnd();
+//
+// console.log(
+//     '=========================================================================='
+// );
+// console.group('Flatten tree example');
+//
+// const name = [
+//     ['w', 'o', 'u', 't', 'e', 'r'],
+//     ['v', ['a', ['n', ['k']]]],
+// ];
+//
+// function flatten(data) {
+//     console.log('flatten', data);
+//
+//     return data.reduce((acc, curr) => {
+//         console.log('reduce', acc, curr);
+//         const extra = Array.isArray(curr) ? flatten(curr) : curr;
+//         return acc.concat(extra);
+//     }, []);
+// }
+//
+// console.log(flatten(name));
+// console.groupEnd();
 
 console.log(
     '=========================================================================='
 );
-console.group('Flatten tree example');
+console.group('Map tree example');
 
-const name = [
-    ['w', 'o', 'u', 't', 'e', 'r'],
-    ['v', ['a', ['n', ['k']]]],
-];
+const tree = {
+    title: 'root',
+    children: [
+        { title: 'child1', children: [{ title: 'grandchild1', children: [] }] },
+        { title: 'child2', children: [{ title: 'grandchild2', children: [] }] },
+        { title: 'child2', children: [{ title: 'grandchild2', children: [] }] },
+    ],
+};
 
-function flatten(data) {
-    console.log('flatten', data);
+function map(tree) {
+    console.log('reverse', tree);
 
     return data.reduce((acc, curr) => {
         console.log('reduce', acc, curr);
@@ -31,7 +58,7 @@ function flatten(data) {
     }, []);
 }
 
-console.log(flatten(name));
+console.log(reverse(tree));
 console.groupEnd();
 
 console.log(
@@ -45,7 +72,7 @@ const pokemon = [
     { name: 'bulbasaur', type: 'grass' },
 ];
 
-result = pokemon.reduce((acc, curr) => {
+const result = pokemon.reduce((acc, curr) => {
     console.log('reduce', acc, curr);
     acc[curr.name] = curr;
     return acc;
