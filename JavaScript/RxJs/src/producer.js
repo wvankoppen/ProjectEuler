@@ -3,7 +3,7 @@ import { demo } from './bootstrapper';
 import { proxy } from './lib/proxy';
 import { tap } from 'rxjs/operators';
 
-demo('producer', producer);
+demo(producer);
 
 function producer() {
     console.log('Start producer');

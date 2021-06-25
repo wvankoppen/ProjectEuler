@@ -7,4 +7,6 @@ import './error';
 import './unsubscribe';
 import './sequencer';
 import './object';
+import './generator';
+import './prototype';
 import './iterable-enumerable';

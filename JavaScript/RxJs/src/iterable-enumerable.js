@@ -1,8 +1,8 @@
 import { demo } from './bootstrapper';
 
-demo('enumerable-iterable', enumIter);
+demo(enumerateIterable);
 
-function enumIter() {
+function enumerateIterable() {
     const arr = [3, 6, 1, 9];
 
     console.group('forof / iterable');

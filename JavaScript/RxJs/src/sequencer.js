@@ -1,4 +1,4 @@
-import { from, of, throwError } from 'rxjs';
+import { from, of, throwError, firstValueFrom } from 'rxjs';
 import {
     catchError,
     concatMap,
@@ -10,26 +10,24 @@ import {
 import { demo } from './bootstrapper';
 import { proxy } from './lib/proxy';
 
-demo('sequencer', sequencer);
+demo(sequencer);
 
 function sequencer() {
     const arr = [200, 2000, 2];
-    const reqs = from(arr)
-        .pipe(
-            map((i) =>
-                of(i).pipe(
-                    delay(i),
-                    proxy('a'),
-                    switchMap((x) => (x < 100 ? of(x) : throwError('err'))),
-                    catchError((x) => of(x))
-                )
-            ),
-            concatMap((x) => x),
-            proxy('b'),
-            toArray()
-        )
-        .toPromise();
+    const reqs = from(arr).pipe(
+        map((i) =>
+            of(i).pipe(
+                delay(i),
+                proxy('a'),
+                switchMap((x) => (x < 100 ? of(x) : throwError('err'))),
+                catchError((x) => of(x))
+            )
+        ),
+        concatMap((x) => x),
+        proxy('b'),
+        toArray()
+    );
 
-    reqs.then(console.log);
+    firstValueFrom(reqs).then(console.log);
     // .subscribe(console.log, console.error);
 }

@@ -1,6 +1,7 @@
 import { demo } from './bootstrapper';
 
-demo('async-await', asyncAwait);
+demo(asyncAwait);
+
 async function asyncAwait() {
     console.log('async-await');
     func().then(console.log);

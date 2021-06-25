@@ -21,5 +21,5 @@ function shareTest2() {
     obs.subscribe((x) => console.log('snd', x));
 }
 
-demo('shareTest1', shareTest1);
-demo('shareTest2', shareTest2);
+demo(shareTest1);
+demo(shareTest2);

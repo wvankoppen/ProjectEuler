@@ -1,6 +1,6 @@
 import { demo } from './bootstrapper';
 
-demo('object', object);
+demo(object);
 
 function object() {
     const proto = { protoProp: 1 };

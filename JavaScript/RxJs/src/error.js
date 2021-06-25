@@ -2,7 +2,7 @@ import { of, throwError } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { demo } from './bootstrapper';
 
-demo('error', error);
+demo(error);
 
 function error() {
     console.log('Reactive throw:');

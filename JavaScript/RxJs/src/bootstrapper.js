@@ -1,7 +1,7 @@
 const demos = [];
 
-export const demo = (name, func) => {
-    demos.push({ name, func });
+export const demo = (func) => {
+    demos.push({ name: func.name, func });
 };
 
 export const render = () => {

@@ -1,7 +1,7 @@
 import { of } from 'rxjs';
 import { demo } from './bootstrapper';
 
-demo('unsubscribe', unsubscribe);
+demo(unsubscribe);
 
 function unsubscribe() {
     console.log('unsub');
