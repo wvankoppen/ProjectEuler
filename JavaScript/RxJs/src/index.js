@@ -10,3 +10,5 @@ import './object';
 import './generator';
 import './prototype';
 import './iterable-enumerable';
+
+import './webcomponent';
