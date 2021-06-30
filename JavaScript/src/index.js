@@ -11,4 +11,6 @@ import './generator';
 import './prototype';
 import './iterable-enumerable';
 
+import './reduce';
+import './scoping';
 import './webcomponent';
