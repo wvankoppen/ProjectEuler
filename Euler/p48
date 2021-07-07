@@ -1,9 +1,0 @@
-#! /usr/bin/python
-s = 0
-for i in range(1,1001):
-  s+=i**i
-  #print i**i
-  
-print str(s)[-10:]
-
-print str("wouter")[-2:]

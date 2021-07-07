@@ -58,6 +58,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2a3c2ba8-ada8-4101-bf53-4477d9fca095" name="Default Changelist" comment="Euler">
       <change afterPath="$PROJECT_DIR$/Euler/166/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Euler/166/script.js" afterDir="false" />
@@ -69,6 +70,15 @@
       <change afterPath="$PROJECT_DIR$/Euler/92/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Euler/26/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Euler/26/script.js" afterDir="false" />
+=======
+    <list default="true" id="e0e7126f-1ade-4eef-a05c-84e2db8a3370" name="Default Changelist" comment="Euler">
+      <change afterPath="$PROJECT_DIR$/JavaScript/Generator/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/Generator/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/RxJs/src/unsubscribe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/RxJs/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/RxJs/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/RxJs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/RxJs/index.html" afterDir="false" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +87,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
-  <component name="ProjectId" id="1eBQgZto3a6atvT7jNZlXHpy3Et" />
+  <component name="ProjectId" id="1g66MEVrw7C8mh5fzvJpmLC1Gof" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documents and Settings" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -103,26 +112,50 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Wouter\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Users\Wouter\source\repos\Experimental\JavaScript\Angular\tst-proj\node_modules\typescript\lib" />
+=======
+    <property name="idea.background.editor" value="C:\Users\Wouter\Pictures\yellow.png,6,scale,center" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JavaScript" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Wouter\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Users\Wouter\source\repos\Knowledge\JavaScript\RxJs\node_modules\typescript\lib" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wouter\source\repos\Knowledge\Euler" />
-      <recent name="C:\Users\Wouter\source\repos\Knowledge\Euler\63" />
-      <recent name="C:\Users\Wouter\source\repos\Knowledge\Challenges\net-force" />
-      <recent name="C:\Users\Wouter\source\repos\Knowledge\JavaScript\Reduce" />
+      <recent name="C:\Users\Wouter\source\repos\Knowledge\JavaScript" />
+      <recent name="C:\Users\Wouter\source\repos\Knowledge\JavaScript\RxJs\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wouter\source\repos\Knowledge\JavaScript\RxJs\src\lib" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/JavaScript/RxJs/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a3c2ba8-ada8-4101-bf53-4477d9fca095" name="Default Changelist" comment="" />
-      <created>1593792617625</created>
+      <changelist id="e0e7126f-1ade-4eef-a05c-84e2db8a3370" name="Default Changelist" comment="Euler" />
+      <created>1597422644822</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1593792617625</updated>
       <workItem from="1593792618987" duration="1082000" />
       <workItem from="1596200611871" duration="4619000" />
@@ -149,29 +182,49 @@
       <workItem from="1625601712364" duration="1776000" />
       <workItem from="1625603649320" duration="60000" />
       <workItem from="1625682426473" duration="1005000" />
+=======
+      <updated>1597422644822</updated>
+      <workItem from="1597422646084" duration="5954000" />
+      <workItem from="1597468282040" duration="5032000" />
+      <workItem from="1597492084278" duration="4483000" />
+      <workItem from="1597496595905" duration="156000" />
+      <workItem from="1597642866392" duration="580000" />
+      <workItem from="1598013341989" duration="1095000" />
+      <workItem from="1598084009440" duration="643000" />
+      <workItem from="1604324165132" duration="5415000" />
+      <workItem from="1604390404051" duration="601000" />
+      <workItem from="1604395452136" duration="610000" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
     </task>
-    <task id="LOCAL-00001" summary="Add challenges">
-      <created>1596474777995</created>
+    <task id="LOCAL-00001" summary="Euler">
+      <created>1597429679242</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1596474777995</updated>
+      <updated>1597429679242</updated>
     </task>
-    <task id="LOCAL-00002" summary="Add challenges">
-      <created>1596474799649</created>
+    <task id="LOCAL-00002" summary="RxJs playground">
+      <created>1597429701317</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1596474799649</updated>
+      <updated>1597429701317</updated>
     </task>
-    <task id="LOCAL-00003" summary="Euler">
-      <created>1596972620809</created>
+    <task id="LOCAL-00003" summary="RxJS playground">
+      <created>1597473310681</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1596972620809</updated>
+      <updated>1597473310681</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Error flow">
+      <created>1597496663534</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597496663534</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,11 +249,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add challenges" />
     <MESSAGE value="Euler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Euler" />
+    <MESSAGE value="RxJs playground" />
+    <MESSAGE value="RxJS playground" />
+    <MESSAGE value="Error flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error flow" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="76" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619603890459">
       <screen x="0" y="0" width="1563" height="1002" />
     </state>
@@ -213,5 +269,64 @@
       <screen x="0" y="0" width="1563" height="1002" />
     </state>
     <state x="102" y="104" width="578" height="801" key="find.popup/0.0.1563.1002@0.0.1563.1002" timestamp="1616314719906" />
+=======
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1598084051786">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="335" key="FileChooserDialogImpl/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598084051786" />
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom" timestamp="1598013528110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom/1920.293.1440.860/-1080.0.1080.1880/0.0.1920.1160@0.0.1920.1160" timestamp="1597431007948" />
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598013528110" />
+    <state width="1899" height="321" key="GridCell.Tab.0.center" timestamp="1598013528110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.center/1920.293.1440.860/-1080.0.1080.1880/0.0.1920.1160@0.0.1920.1160" timestamp="1597431007948" />
+    <state width="1899" height="321" key="GridCell.Tab.0.center/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598013528110" />
+    <state width="1899" height="321" key="GridCell.Tab.0.left" timestamp="1598013528109">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.left/1920.293.1440.860/-1080.0.1080.1880/0.0.1920.1160@0.0.1920.1160" timestamp="1597431007948" />
+    <state width="1899" height="321" key="GridCell.Tab.0.left/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598013528109" />
+    <state width="1899" height="321" key="GridCell.Tab.0.right" timestamp="1598013528110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.right/1920.293.1440.860/-1080.0.1080.1880/0.0.1920.1160@0.0.1920.1160" timestamp="1597431007948" />
+    <state width="1899" height="321" key="GridCell.Tab.0.right/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598013528110" />
+    <state x="759" y="282" key="RollbackChangesDialog" timestamp="1597473264328">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="759" y="282" key="RollbackChangesDialog/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597473264328" />
+    <state x="461" y="225" key="SettingsEditor" timestamp="1598013822990">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="461" y="225" key="SettingsEditor/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598013822990" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1597473312602">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597473312602" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597496693539">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597496693539" />
+    <state x="2420" y="525" width="555" height="534" key="find.popup" timestamp="1604324448770">
+      <screen x="1920" y="293" width="1440" height="860" />
+    </state>
+    <state x="667" y="313" width="585" height="534" key="find.popup/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597492789812" />
+    <state x="2420" y="525" width="555" height="534" key="find.popup/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@1920.293.1440.860" timestamp="1604324448770" />
+    <state x="733" y="454" width="621" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1598013821832">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="733" y="454" width="621" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1598013821832" />
+    <state x="616" y="270" key="run.anything.popup" timestamp="1597494075929">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="616" y="270" key="run.anything.popup/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597494075929" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1597469046052">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597469046052" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
   </component>
 </project>
