@@ -58,14 +58,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3c2ba8-ada8-4101-bf53-4477d9fca095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Euler/26/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Euler/26/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Euler/63/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Euler/63/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Euler/79/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Euler/79/script.js" afterDir="false" />
+    <list default="true" id="2a3c2ba8-ada8-4101-bf53-4477d9fca095" name="Default Changelist" comment="Euler">
+      <change afterPath="$PROJECT_DIR$/Euler/166/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/166/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/53/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/53/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/54/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/54/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/92/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/92/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Euler/26/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Euler/26/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +92,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Euler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documents and Settings" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,9 +101,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Wouter\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="run.prettier.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Users\Wouter\source\repos\Experimental\JavaScript\Angular\tst-proj\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -127,6 +130,25 @@
       <workItem from="1596518069177" duration="7821000" />
       <workItem from="1596605694582" duration="2156000" />
       <workItem from="1596972590592" duration="11066000" />
+      <workItem from="1615923429910" duration="5373000" />
+      <workItem from="1616180058568" duration="11294000" />
+      <workItem from="1616481932347" duration="596000" />
+      <workItem from="1616483299329" duration="2000" />
+      <workItem from="1617649764021" duration="214000" />
+      <workItem from="1617823767218" duration="572000" />
+      <workItem from="1618388751227" duration="4048000" />
+      <workItem from="1618392857801" duration="106000" />
+      <workItem from="1618393089651" duration="215000" />
+      <workItem from="1619603810545" duration="306000" />
+      <workItem from="1619727669207" duration="341000" />
+      <workItem from="1619813514543" duration="2570000" />
+      <workItem from="1619859937772" duration="597000" />
+      <workItem from="1622228708518" duration="1396000" />
+      <workItem from="1622524429712" duration="17000" />
+      <workItem from="1624563028410" duration="123000" />
+      <workItem from="1625601712364" duration="1776000" />
+      <workItem from="1625603649320" duration="60000" />
+      <workItem from="1625682426473" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="Add challenges">
       <created>1596474777995</created>
@@ -179,21 +201,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Euler" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="225" key="SettingsEditor" timestamp="1596206525429">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="76" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619603890459">
+      <screen x="0" y="0" width="1563" height="1002" />
     </state>
-    <state x="461" y="225" key="SettingsEditor/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1596206525429" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1596972628914">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="76" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1563.1002@0.0.1563.1002" timestamp="1619603890459" />
+    <state x="562" y="256" key="FileChooserDialogImpl" timestamp="1616228530761">
+      <screen x="0" y="0" width="1563" height="1002" />
     </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1596972628914" />
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596972695886">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="562" y="256" key="FileChooserDialogImpl/0.0.1563.1002@0.0.1563.1002" timestamp="1616228530761" />
+    <state x="102" y="104" width="578" height="801" key="find.popup" timestamp="1616314719906">
+      <screen x="0" y="0" width="1563" height="1002" />
     </state>
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1596972695886" />
-    <state x="616" y="270" key="run.anything.popup" timestamp="1596207279012">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="616" y="270" key="run.anything.popup/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1596207279012" />
+    <state x="102" y="104" width="578" height="801" key="find.popup/0.0.1563.1002@0.0.1563.1002" timestamp="1616314719906" />
   </component>
 </project>

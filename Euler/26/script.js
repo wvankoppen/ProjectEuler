@@ -22,7 +22,7 @@ function divide(denominator) {
     let ret = '';
     let n = 1;
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 2000; i++) {
 
         if (i > 0) {
             ret += Math.floor(n / denominator);
@@ -30,16 +30,24 @@ function divide(denominator) {
         }
         n = n % denominator;
         n *= 10;
-        if (i>0 && ret.length % 2 === 0) {
+        if (i>0) {
             const leftPart = ret.substr(0, ret.length / 2);
             const rightPart = ret.substr(ret.length / 2);
-            if (leftPart === rightPart) {
+            if (leftPart === rightPart && leftPart !== "0") {
                 return leftPart;
             }
         }
     }
+    return false;
 }
 
-for (let i=0; i<1000; i++) {
-    l(divide(i),i);
-}
+// l(divide(97));
+
+let max = 0;
+
+for (let i=1; i<1000; i++) {
+    let r = divide(i);
+    if(r.length > max) {
+        max = r.length;
+        l(i, r);
+    }}
